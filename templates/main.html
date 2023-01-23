@@ -2,9 +2,254 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <style>
+        .sidenav {
+            height: 100%;
+            width: 320px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: mediumseagreen;
+            overflow-x: hidden;
+            bottom: 0;
+            margin: 0;
+            padding: 15px 20px;
+            z-index: 2000;
+        }
+        .sidenav h2 {
+            margin: 10px 0;
+            text-shadow: rgba(80, 80, 80, 0.1) -1px -1px 1px, rgba(131, 131, 131, 0.5) 1px 1px 1px;
+            font-size: 1.3em;
+            line-height: 1.3em;
+        }
 
+        .sidenav ul li{
+            list-style-type: none;
+            margin-left: -40px;
+        }
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ffffff;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+        .sidenav h2 a {
+            color: #dadada;
+            text-decoration: none;
+        }
+
+        header{
+            margin-left: 50px;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: black;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 0 15px;
+            background: white;
+            font-size: 16px;
+            margin-top: 100px;
+        }
+        .post-image img {
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+        .post h1 {
+            color: #222;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .post-meta {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        time,
+        .author {
+            padding-right: 26px;
+            position: relative;
+        }
+        time:after,
+        .author:after {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: darkseagreen;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 1em;
+        }
+        @media (min-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 0 45px;
+            }
+
+            .post-image img {
+                float: right;
+                width: 300px;
+                margin: 0 0 20px 20px;
+            }
+
+            .post-header {
+                padding-left: 26px;
+                border-left: 4px solid darkseagreen;
+                margin-left: -30px;
+            }
+        }
+        .border{
+            margin-top: 30px;
+            width: 700px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            padding-left: 0px;
+            margin-left: -30px;
+            border-left: 4px solid #D8D8D8;
+        }
+        h3{
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        .p_back{
+            margin-right: 100px;
+        }
+        .head{
+            background-color: darkseagreen;
+            margin-top: -100px;
+            width: 2100px;
+            height: 58px;
+            margin-left: -100px;
+            padding-left: 800px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            color: white;
+            position: fixed;
+            padding-top: 15px;
+
+        }
+        .foot{
+            background-color: darkseagreen;
+            width: 2100px;
+            height: 58px;
+            margin-left: -100px;
+            padding-left: 800px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 1.2em;
+            color: white;
+            padding-top: 15px;
+        }
+    </style>
+
+</head>
+<header class="head">Аналитика профессии Android - разработчик</header>
+<body>
+    <nav class="sidenav">
+        <h2 class="logo">
+            Android разработчик
+        </h2>
+        <ul class="hidden-menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/demand">Востребованность</a></li>
+            <li><a href="/geography">География</a></li>
+            <li><a href="/skills">Навыки</a></li>
+            <li><a href="/last-vacansies">Последнии вакансии</a></li>
+        </ul>
+
+    </nav>
+    {% block content%}
+    <header>
+
+    <div class="container">
+        <div class="post">
+            <div class="post-image">
+                <img src="https://sun9-33.userapi.com/impf/qzXXqZp2dMLzV2cRbzfnWZ8pggB_NWq5b6x8mQ/fBov9TL3afE.jpg?size=534x534&quality=96&sign=698732128de8aabf51f7b446a6136fd9&type=album">
+            </div>
+            <div class="post-content">
+                <div class="post-header">
+                    <h1>Кто такой Android-разработчик?</h1>
+                </div>
+                <p>ПAndroid-разработчик создает, обновляет, усовершенствует мобильные приложения для смартфонов,
+                    планшетов, электронных книг, игровых приставок и других девайсов, работающих на операционной системе Android.
+                    Профессия считается самой востребованной в мобильной разработке, так как «Андроид» установлен в 80 % мобильных устройств мира.
+                    Android Developer (разработчик на «Андроиде», андроид девелопер) создает мобильные приложения на
+                    операционной системе Android. Андроид-программист использует языки Java, Kotlin, C++,
+                    иногда Javascript. В 2019 году Google объявил Kotlin официальным и предпочтительным языком для Android-разработки.
+                </p>
+                    <h2>Список функций андроид-разработчика:</h2>
+                        <ul>
+                        <li>создание архитектуры приложения;</li>
+                        <li>конструирование интерфейса программы;</li>
+                        <li>написание программного кода;</li>
+                        <li>тестирование программного кода;</li>
+                        <li>загрузка программы в android-магазин или на сайт;</li>
+                        <li>внесение правок, выпуск обновлений;</li>
+                        <li>анализ поведения пользователей для улучшения программы.</li>
+                        </ul>
+                    <h2>Можно ли работать на себя? </h2>
+                        <p class="p_back">
+                            Android-разработчик может работать на себя, создавая приложения и продавая подписку
+                            на них через Google Play. Разработка не требует больших материальных вложений,
+                            но программисту-фрилансеру надо разбираться в маркетинге и дизайне.
+	Бизнес устойчиво устремился в интернет. Электронная коммерция настоятельно требует разработки приложений для
+                            мобильных устройств. Вот почему мобильные разработчики, в частности Android developers,
+                            так остро востребованы сегодня. Они создают игры, приложения для банков, транспортных
+                            компаний, сервисов покупки и доставки, бронирования гостиниц и билетов на поезда и самолеты.
+                        </p>
+
+                <h2>Нужны ли Android-разработчики в компаниях?</h2>
+                <p class="p_back">
+
+                    Сегодня мир мобильных приложений очень широк, и постоянно расширяется, развивается, совершенствуется.
+                    Соответственно, постоянно сохраняется и высокий спрос на Android-разработчиков, они требуются как в
+                    большие, так и в маленькие компании.
+                    Если вы выбираете работу в небольшой компании – это отличный вариант для новичка, потому что у
+                    маленьких бизнесов выбор невелик, и они охотно прибегают к услугам начинающих специалистов.
+                    Но при этом Android-разработчик часто выступает в роли эдакого человека-оркестра. Он не только
+                    занимается разработкой и поддержкой конкретных приложений, но и анализирует ЦА, делает
+                    работу дизайнера, может самостоятельно составить ТЗ, если заказчик не очень хорошо себе
+                    представляет сам процесс разработки. Работа в маленьких компаниях предлагает не очень сложные
+                    задачи, с которыми опытные программисты справляются достаточно быстро.
+                </p>
+            </div>
+        </div>
+    </div>
+    </header>
+{% endblock %}
 </body>
-</html>
+<footer class="foot">
+    Мурыгин Константин Александрович РИ-210930
+</footer>
+
+
+    </html>
+

@@ -1,4 +1,6 @@
 # created by virtualenv automatically
-venv/bin
+venv
 static
 .idea
+skills_by_city
+templates/data

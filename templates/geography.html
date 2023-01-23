@@ -1,10 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
 
-</body>
-</html>
+    <head>
+        <style>
+            header{
+            margin-left: 50px; margin-top: 100px; margin-bottom: 200px;
+            }
+            .container {
+            max-width: 960px;
+            margin: 50px auto;
+            padding: 0 15px;
+            background: white;
+            }
+            img{
+                height: 750px;
+                width: 1150px;
+            }
+            body {
+            font-family: 'Montserrat', sans-serif;
+            }
+            table {
+                width: 65%;
+                background: #000000;
+                color: #2a2a2a;
+                border-spacing: 1px;
+                margin-left: 200px;
+                }
+                td, th {
+                    background: darkseagreen;
+                    padding: 5px;
+                }
+
+        </style>
+    </head>
+    <body>
+    <header>
+    <div class="container">
+        <h2 style="text-align: center; color: black">Статистика по географии</h2>
+        <img src= "{% static "/graph3.png" %}" alt="graph">
+        <h2 style="text-align: center; color: black">Статистика по городам</h2>
+        <table>
+        <thead>
+            <tr>
+                <th>Город</th>
+                <th>Уровень зарплат</th>
+                <th>Город</th>
+                <th>Доля вакансий</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    {% for val in val0 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val1 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val2 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val3 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val4 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val5 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val6 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val7 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val8 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val9 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    {% for val in val10 %}
+                    <td>{{ val }}</td>
+                    {% endfor %}
+                </tr>
+        </tbody>
+
+    </table>
+    </div>
+    </header>
+    {% endblock content%}
+    </body>
